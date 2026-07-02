@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react'
+import { Link } from 'react-router-dom';
 import { productContext } from '../stores/ProductContex.jsx'
 
 const Header = () => {
@@ -48,9 +49,11 @@ const Header = () => {
       {/* RIGHT SIDE */}
       <div className="nav-right">
 
-        <button>
-          <i className="ri-search-line"></i>
-        </button>
+<Link to="/search">
+    <button>
+        <i className="ri-search-line"></i>
+    </button>
+</Link>
 
         {/* PROFILE */}
         <div className="user-profile">

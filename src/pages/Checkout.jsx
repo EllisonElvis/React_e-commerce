@@ -1,20 +1,30 @@
 import React, { useContext } from 'react'
 import { productContext } from '../stores/ProductContex'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 const Checkout = () => {
   const { cart, totalPrice } = useContext(productContext)
+  const navigate = useNavigate();
 
   return (
     <>
 
-    <header className='checkout-to-home'>
-      <h1></h1>
-    </header>
+      <div className="back-header">
+        <button className="back-btn" onClick={() => navigate(-1)}>
+          <i className="ri-arrow-left-line"></i>
+          Back
+        </button>
+
+        <h1>Checkout</h1>
+      </div>
+
+
       <div className="checkout">
 
+
+
         <div className="checkout-left">
-          <h1>Checkout</h1>
+
 
           <form className="checkout-form">
             <input type="text" placeholder="Full Name" />
